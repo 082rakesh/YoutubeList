@@ -8,24 +8,6 @@
 
 import Foundation
 
-//struct Video: Decodable {
-//    let title: String
-//    let number_of_views:String
-//    let thumbnail_image_name: String
-//    let duration: Int
-//    let channel: Channel
-//}
-//
-//struct Channel: Decodable {
-//    let name: String
-//    let profile_image_name: String
-//}
-//
-//struct Videos: Decodable {
-//    let videosList: [Video]
-//}
-
-
 typealias Videos = [Video]
 
 struct Video: Decodable {

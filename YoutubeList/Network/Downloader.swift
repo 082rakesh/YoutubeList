@@ -31,6 +31,8 @@ class Downloader: NSObject {
         }
     }
     
+    /*
+     // TODO: Create api for download data
     func downloadData() {
         if let url = URL(string: Constant.baseUrl) {
             let downloadRequest = URLRequest(url: url)
@@ -42,10 +44,11 @@ class Downloader: NSObject {
             print("Invalid URL")
 
         }
-        
     }
+ */
 }
 
+/*
 extension Downloader: URLSessionDownloadDelegate {
 
     public func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
@@ -57,6 +60,5 @@ extension Downloader: URLSessionDownloadDelegate {
         if error != nil {
         }
     }
-
-
 }
+ */
