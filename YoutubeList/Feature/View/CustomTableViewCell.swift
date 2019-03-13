@@ -30,6 +30,7 @@ class CustomTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        avatarImage.layer.cornerRadius = avatarImage.frame.width / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
