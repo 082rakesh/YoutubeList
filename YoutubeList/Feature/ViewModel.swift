@@ -13,16 +13,13 @@ final class ViewModel {
     private var videoList =  [Video]()
     var onVideoListUpdate: (() -> Void)?
     
-    func getVideoList() {
-        
+    private func getYouttubeList() {
         Downloader().fetchRequest { [weak self] (data, urlResponse, error) in
             if error == nil {
                 if let responseData = data{
                     do {
                         self?.videoList =  try JSONDecoder().decode([Video].self, from: responseData)
                         self?.onVideoListUpdate?()
-                        print(self?.videoList)
-
                     } catch {
                         print(error.localizedDescription)
                     }
@@ -35,6 +32,10 @@ final class ViewModel {
 }
 extension ViewModel {
     
+    func getVideoList() {
+        getYouttubeList()
+    }
+
     func getVideos() -> Int {
         return videoList.count
     }

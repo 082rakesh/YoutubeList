@@ -12,6 +12,9 @@ let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
     
+    /**
+     Sets the cached image if available or else downloads the image and caches it for subsequent usage.
+     */
     func cacheImage(imageUrl: String) {
         guard let url = URL(string: imageUrl) else {
             return

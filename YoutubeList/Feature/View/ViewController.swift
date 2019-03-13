@@ -27,6 +27,9 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+     Setsup tableview
+     */
     private func setupTabelView() {
         videoTableView.estimatedRowHeight = UITableView.automaticDimension
         videoTableView.rowHeight = UITableView.automaticDimension
@@ -34,6 +37,7 @@ class ViewController: UIViewController {
         videoTableView.register(UINib(nibName: CustomTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: ViewController.cellIdentifier)
     }
 }
+// MARK: - Datasource
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

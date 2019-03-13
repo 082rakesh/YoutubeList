@@ -8,6 +8,9 @@
 
 import UIKit
 
+/**
+ This class represents a customized tableview cell
+ */
 class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var topImageView: UIImageView!
@@ -34,6 +37,10 @@ class CustomTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    /**
+     update cell UI
+     - Parameters: video type
+     */
     private func updateUI(with video: Video) {
         topImageView.cacheImage(imageUrl: video.thumbnailImageName)
         avatarImage.cacheImage(imageUrl: video.channel.profileImageName)
