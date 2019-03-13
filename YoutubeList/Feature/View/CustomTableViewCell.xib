@@ -23,11 +23,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="357" height="211"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="211" id="XbW-Ha-jj5"/>
+                            <constraint firstAttribute="height" constant="211" id="jxv-LJ-azJ"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iky-qD-CNL">
-                        <rect key="frame" x="0.0" y="219" width="357" height="85.5"/>
+                        <rect key="frame" x="0.0" y="216" width="357" height="88.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i8E-VA-hdW">
                                 <rect key="frame" x="4" y="0.0" width="80" height="80"/>
@@ -60,20 +60,20 @@
                             <constraint firstItem="i8E-VA-hdW" firstAttribute="top" secondItem="iky-qD-CNL" secondAttribute="top" id="hYT-88-f7K"/>
                             <constraint firstItem="i8E-VA-hdW" firstAttribute="leading" secondItem="iky-qD-CNL" secondAttribute="leading" constant="4" id="jiT-f3-hMj"/>
                             <constraint firstAttribute="trailing" secondItem="7Pr-7b-q1D" secondAttribute="trailing" constant="8" id="laU-04-84S"/>
-                            <constraint firstAttribute="bottom" secondItem="i8E-VA-hdW" secondAttribute="bottom" constant="5.5" id="oaL-YM-zY2"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="i8E-VA-hdW" secondAttribute="bottom" constant="5.5" id="oaL-YM-zY2"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bHq-hT-ZZW" secondAttribute="bottom" constant="5" id="pd0-aA-YJk"/>
                             <constraint firstItem="7Pr-7b-q1D" firstAttribute="top" secondItem="iky-qD-CNL" secondAttribute="top" constant="4" id="wC4-kI-nfu"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="sYa-Sw-gDg" secondAttribute="trailing" id="HFU-4m-rtA"/>
-                    <constraint firstItem="sYa-Sw-gDg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HkK-Ca-EJt"/>
-                    <constraint firstItem="iky-qD-CNL" firstAttribute="top" secondItem="sYa-Sw-gDg" secondAttribute="bottom" constant="8" id="Jaa-9f-LdT"/>
+                    <constraint firstItem="sYa-Sw-gDg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Imr-bT-vlt"/>
+                    <constraint firstItem="iky-qD-CNL" firstAttribute="top" secondItem="sYa-Sw-gDg" secondAttribute="bottom" constant="5" id="Lfl-4r-1Ed"/>
                     <constraint firstAttribute="bottom" secondItem="iky-qD-CNL" secondAttribute="bottom" constant="5" id="N7q-0m-x1B"/>
-                    <constraint firstItem="sYa-Sw-gDg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XJ7-Ve-xf8"/>
                     <constraint firstItem="iky-qD-CNL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jfb-3p-Ibf"/>
+                    <constraint firstAttribute="trailing" secondItem="sYa-Sw-gDg" secondAttribute="trailing" id="kxG-gr-h2Z"/>
                     <constraint firstAttribute="trailing" secondItem="iky-qD-CNL" secondAttribute="trailing" id="mQe-bo-5Sb"/>
+                    <constraint firstItem="sYa-Sw-gDg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uOk-4T-WIe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
