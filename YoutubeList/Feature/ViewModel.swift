@@ -21,6 +21,7 @@ final class ViewModel {
                     do {
                         self?.videoList =  try JSONDecoder().decode([Video].self, from: responseData)
                         self?.onVideoListUpdate?()
+                        print(self?.videoList)
 
                     } catch {
                         print(error.localizedDescription)
@@ -40,5 +41,9 @@ extension ViewModel {
     
     func title(at indexPath: IndexPath) -> String {
         return videoList[indexPath.row].title
+    }
+    
+    func video(at indexPath: IndexPath) -> Video {
+        return videoList[indexPath.row]
     }
 }

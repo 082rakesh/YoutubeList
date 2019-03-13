@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTabelView()
         viewModel.getVideoList()
 
         viewModel.onVideoListUpdate = { () in            
@@ -24,6 +25,13 @@ class ViewController: UIViewController {
                 self?.videoTableView.reloadData()
             }
         }
+    }
+    
+    private func setupTabelView() {
+        videoTableView.estimatedRowHeight = UITableView.automaticDimension
+        videoTableView.rowHeight = UITableView.automaticDimension
+        
+        videoTableView.register(UINib(nibName: CustomTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: ViewController.cellIdentifier)
     }
 }
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -33,8 +41,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         let cell = tableView.dequeueReusableCell(withIdentifier: ViewController.cellIdentifier, for: indexPath)
-        cell.textLabel?.text = viewModel.title(at: indexPath)
-        return cell
+        guard let customCell = tableView.dequeueReusableCell(withIdentifier: ViewController.cellIdentifier, for: indexPath) as? CustomTableViewCell else { return UITableViewCell() }
+        customCell.model = viewModel.video(at: indexPath)
+        return customCell
     }
 }
